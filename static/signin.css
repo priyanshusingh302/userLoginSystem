@@ -22,12 +22,12 @@ body
 	padding:40px;
 	position:absolute;
 	margin:auto;
-	left:30%;
-	top:5%;
+	right:5%;
+	top:15%;
 	border-radius:25px;
 	width:400px;
 	content:'';
-	vertical-align:center;
+	/* vertical-align:bottom; */
 	
 }
 input[type=text]
@@ -54,7 +54,7 @@ input[type=text]:hover,input[type=password],input[type=email]:hover
 }
 input[type=text]:focus,input[type=password]:focus
 {
-	background:rgb(255,239,193);
+	background:rgb(236, 255, 193);
 }
 .btn {
   border: 2px solid black;
@@ -67,13 +67,13 @@ input[type=text]:focus,input[type=password]:focus
 }
 
 .sign:hover{
-  border-color: #f44336;
-  color: red;
+  border-color: #88b45f;
+  color: #658823;
   background:white;
 }
 
 .sign {
-  background: #f44336;
+  background: #658823;
   color: white;
 }
 a{

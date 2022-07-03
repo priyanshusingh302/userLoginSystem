@@ -41,12 +41,12 @@ def signup(request):
             messages.error(request, "Username must be under 20 charcters!!")
             return redirect('home')
 
-        if pass1 != pass2:
-            messages.error(request, "Password incorrect!!")
-            return redirect('home')
-
         if not username.isalnum():
             messages.error(request, "Username must be Alpha-Numeric!!")
+            return redirect('home')
+
+        if pass1 != pass2:
+            messages.error(request, "Password incorrect!!")
             return redirect('home')
 
         myuser = User.objects.create_user(username, email, pass1)
@@ -122,7 +122,7 @@ def signin(request):
             return render(request, "authentication/index.html", {"fname": fname})
         else:
             messages.error(request, "Bad Credentials!!")
-            return redirect('home')
+            return redirect('signin')
 
     return render(request, "authentication/signin.html")
 

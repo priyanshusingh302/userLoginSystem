@@ -42,7 +42,7 @@ def signup(request):
             return redirect('home')
 
         if pass1 != pass2:
-            messages.error(request, "Passwords didn't matched!!")
+            messages.error(request, "Password incorrect!!")
             return redirect('home')
 
         if not username.isalnum():
@@ -61,7 +61,7 @@ def signup(request):
         # Welcome Email
         subject = "Welcome to Django Login!!"
         message = "Hello " + myuser.first_name + "!! \n" + \
-            "Welcome to userLoginSystem!! \nThank you for visiting our website\n. We have also sent you a confirmation email, please confirm your email address. \n\nThanking You\nAnubhav Madhav"
+            "Welcome to userLoginSystem!! \nThank you for visiting our website\n. We have also sent you a confirmation email, please confirm your email address. \n\nThanking You\nAdmin"
         from_email = settings.EMAIL_HOST_USER
         to_list = [myuser.email]
         send_mail(subject, message, from_email, to_list, fail_silently=True)

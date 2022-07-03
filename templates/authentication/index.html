@@ -30,12 +30,12 @@
         {% if user.is_authenticated %}
         <h3>Hello {{fname}}!</h3>
         <h4>You're successfully logged in.</h4>
-        <button type="submit" class="btn sign"><a href="/signout">SignOut</a></button>
+        <a href="/signout"><button type="submit" class="btn btn-primary sign">SignOut</button></a>
         {% else %}
-        <button type="submit" class="btn sign"><a href="/signup">SignUp</a></button>
+        <a href="/signup"><button type="submit" class="btn btn-primary sign">SignUp</button></a>
         <br />
         <br />
-        <button type="submit" class="btn sign"><a href="/signin">SignIn</a></button>
+        <a href="/signin"><button type="submit" class="btn btn-primary sign">SignIn</button></a>
         {% endif %}
     </div>
 </body>

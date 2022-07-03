@@ -69,7 +69,7 @@ def signup(request):
         # Email Address Confirmation Email
         current_site = get_current_site(request)
         email_subject = "Confirm your Email @ userLoginSystem - Django Login!!"
-        message2 = render('email_confirmation.html', {
+        message2 = render_to_string('email_confirmation.html', {
 
             'name': myuser.first_name,
             'domain': current_site.domain,

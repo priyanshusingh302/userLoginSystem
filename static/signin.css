@@ -68,13 +68,13 @@ input[type=text]:focus,input[type=password]:focus
 
 .sign:hover{
   border-color: #88b45f;
-  color: #658823;
+  color: #000000;
   background:white;
 }
 
 .sign {
   background: #658823;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 a{
     color:black;
